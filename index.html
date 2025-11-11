@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Mohammed Banish — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0f1724;
+        --card: #0b1220;
+        --muted: #9aa4b2;
+        --accent: #6ee7b7;
+        --glass: rgba(255, 255, 255, 0.04);
+        --maxw: 1100px;
+        --radius: 14px;
+        --glass-border: rgba(255, 255, 255, 0.06);
+        font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        background: linear-gradient(180deg, #071226 0%, #081025 60%);
+        color: #e6eef6;
+      }
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      .wrap {
+        max-width: var(--maxw);
+        margin: 36px auto;
+        padding: 28px;
+      }
+
+      .header {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .brand {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+      }
+      .avatar {
+        width: 82px;
+        height: 82px;
+        border-radius: 14px;
+        background: linear-gradient(135deg, #0f1724, #12202f);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        color: var(--accent);
+        font-size: 28px;
+        box-shadow: 0 8px 30px rgba(6, 12, 20, 0.6);
+      }
+      .name-title {
+        line-height: 1;
+      }
+      .name {
+        font-size: 20px;
+        font-weight: 800;
+      }
+      .title {
+        font-size: 13px;
+        color: var(--muted);
+      }
+      .contact {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+      }
+      .chip {
+        background: var(--glass);
+        border: 1px solid var(--glass-border);
+        padding: 10px 12px;
+        border-radius: 12px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 320px 1fr;
+        gap: 22px;
+        margin-top: 22px;
+      }
+      @media (max-width: 880px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        .avatar {
+          width: 64px;
+          height: 64px;
+        }
+      }
+
+      .card {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.02),
+          rgba(255, 255, 255, 0.01)
+        );
+        border-radius: var(--radius);
+        padding: 20px;
+        border: 1px solid var(--glass-border);
+      }
+      .section-title {
+        font-size: 13px;
+        color: var(--muted);
+        letter-spacing: 0.6px;
+        margin-bottom: 12px;
+      }
+      .profile-bio {
+        color: #dbe7f5;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+      .contact-list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 12px;
+      }
+      .contact-list a {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .skill-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 8px;
+      }
+      .skill {
+        background: rgba(255, 255, 255, 0.03);
+        padding: 8px 10px;
+        border-radius: 10px;
+        font-size: 13px;
+        color: var(--muted);
+      }
+
+      .hero {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 16px;
+      }
+      .headline {
+        font-size: 18px;
+        font-weight: 700;
+      }
+      .subhead {
+        color: var(--muted);
+        margin-top: 6px;
+      }
+
+      .section {
+        margin-top: 18px;
+      }
+      .experience-item {
+        padding: 12px;
+        border-radius: 10px;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.01),
+          rgba(255, 255, 255, 0.01)
+        );
+        border: 1px solid rgba(255, 255, 255, 0.02);
+      }
+      .exp-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      .exp-role {
+        font-weight: 600;
+      }
+      .exp-company {
+        color: var(--muted);
+        font-size: 13px;
+      }
+      .exp-desc {
+        color: #cfe9ff;
+        margin-top: 8px;
+        font-size: 14px;
+      }
+      .timeline {
+        font-size: 13px;
+        color: var(--muted);
+      }
+
+      .edu-list,
+      .cert-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .badges {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      .badge {
+        padding: 8px 10px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.03);
+        font-size: 13px;
+        color: var(--muted);
+      }
+
+      footer {
+        margin-top: 28px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .muted {
+        color: var(--muted);
+      }
+      .pill {
+        display: inline-block;
+        padding: 6px 10px;
+        border-radius: 999px;
+        font-size: 13px;
+      }
+
+      @media (max-width: 500px) {
+        .header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="header">
+        <div class="brand">
+          <div class="avatar">MB</div>
+          <div class="name-title">
+            <div class="name">Mohammed Banish</div>
+            <div class="title">
+              IT Faculty • Computer Science Educator • Digital Learning
+              Specialist
+            </div>
+          </div>
+        </div>
+        <div class="contact">
+          <a class="chip" href="mailto:sempaijks@gmail.com"
+            >sempaijks@gmail.com</a
+          >
+          <a class="chip" href="tel:+971567928418">+971 56 792 8418</a>
+        </div>
+      </header>
+
+      <div class="grid">
+        <aside>
+          <div class="card">
+            <div class="section-title">Profile</div>
+            <div class="profile-bio">
+              Passionate Computer Science educator with 3+ years experience in
+              teaching IT, integrating digital learning platforms, and training
+              teachers. Skilled in Python, C++, HTML and multimedia tools —
+              dedicated to creating technology-enabled classrooms and mentoring
+              students.
+            </div>
+
+            <div class="section" style="margin-top: 16px">
+              <div class="section-title">Contact & Links</div>
+              <div class="contact-list">
+                <a href="https://www.linkedin.com/in/mohammed-banish-b54872198/"
+                  >LinkedIn • linkedin.com/in/mohammed-banish-b54872198</a
+                >
+                <a href="https://github.com/Banishjks"
+                  >GitHub • github.com/Banishjks</a
+                >
+                <a href="mailto:sempaijks@gmail.com"
+                  >Email • sempaijks@gmail.com</a
+                >
+                <a href="tel:+971567928418">Phone • +971 56 792 8418</a>
+              </div>
+            </div>
+
+            <div class="section">
+              <div class="section-title">Core Competencies</div>
+              <div class="skill-list">
+                <span class="skill">Python</span>
+                <span class="skill">C++</span>
+                <span class="skill">HTML</span>
+                <span class="skill">AI Handling</span>
+                <span class="skill">ERP Systems</span>
+                <span class="skill">Adobe Photoshop</span>
+                <span class="skill">Illustrator</span>
+                <span class="skill">Premiere Pro</span>
+                <span class="skill">Davinci Resolve</span>
+                <span class="skill">LEAD Platform</span>
+              </div>
+            </div>
+
+            <div class="section">
+              <div class="section-title">Languages</div>
+              <div class="badges">
+                <span class="badge">English</span
+                ><span class="badge">Malayalam</span>
+              </div>
+            </div>
+
+            <div class="section">
+              <div class="section-title">Soft skills</div>
+              <div class="skill-list">
+                <span class="skill">Communication</span>
+                <span class="skill">Leadership</span>
+                <span class="skill">Presentation</span>
+                <span class="skill">Problem Solving</span>
+                <span class="skill">Creativity</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <main>
+          <section class="card hero">
+            <div style="flex: 1">
+              <div class="headline">
+                IT Faculty & Digital Learning Specialist
+              </div>
+              <div class="subhead">
+                Experienced in curriculum integration, interactive classroom
+                training, teacher development and student mentoring. Based in
+                Dubai / Kerala — available for remote & on-site roles.
+              </div>
+            </div>
+            <div style="text-align: right; min-width: 160px">
+              <div class="pill">3+ years experience</div>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="section-title">Professional Experience</div>
+            <div class="experience-item">
+              <div class="exp-head">
+                <div>
+                  <div class="exp-role">
+                    IT Faculty — BrightLine English School
+                  </div>
+                  <div class="exp-company">Kerala, India</div>
+                </div>
+                <div class="timeline">Jun 2025 — Nov 2025</div>
+              </div>
+              <div class="exp-desc">
+                Delivered secondary-level computer science lessons; integrated
+                interactive tools; guided students in Python, HTML and C++;
+                supported ICT operations and encouraged participation in digital
+                competitions.
+              </div>
+            </div>
+
+            <div style="height: 10px"></div>
+
+            <div class="experience-item">
+              <div class="exp-head">
+                <div>
+                  <div class="exp-role">
+                    IT Faculty | PRO & Graphic Designer — Peace Public School
+                  </div>
+                  <div class="exp-company">Kerala, India</div>
+                </div>
+                <div class="timeline">Jun 2023 — Mar 2025</div>
+              </div>
+              <div class="exp-desc">
+                Taught theory and practicals in CS & IT, conducted teacher
+                training for smart classrooms and ERP, implemented LEAD
+                platform, and mentored students on coding and multimedia
+                projects.
+              </div>
+            </div>
+
+            <div style="height: 10px"></div>
+
+            <div class="experience-item">
+              <div class="exp-head">
+                <div>
+                  <div class="exp-role">
+                    Project Coordinator — Kites India (NGO)
+                  </div>
+                  <div class="exp-company">Vengara, Kerala</div>
+                </div>
+                <div class="timeline">Feb 2021 — Present</div>
+              </div>
+              <div class="exp-desc">
+                Led digital literacy and sustainability programs; managed
+                timelines, budgets and volunteers for community outreach
+                projects.
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="section-title">Education</div>
+            <div class="edu-list">
+              <div class="experience-item">
+                <div class="exp-head">
+                  <div>
+                    <div class="exp-role">
+                      Diploma in Graphic Designing — GrapesGenix
+                    </div>
+                    <div class="exp-company">Kerala, India</div>
+                  </div>
+                  <div class="timeline">2025</div>
+                </div>
+              </div>
+
+              <div class="experience-item">
+                <div class="exp-head">
+                  <div>
+                    <div class="exp-role">
+                      M.Sc. Computer Science — St. Thomas College, University of
+                      Calicut
+                    </div>
+                    <div class="exp-company">Kerala, India</div>
+                  </div>
+                  <div class="timeline">2021 — 2023</div>
+                </div>
+              </div>
+
+              <div class="experience-item">
+                <div class="exp-head">
+                  <div>
+                    <div class="exp-role">
+                      B.Sc. Computer Science — MES Ponnani College
+                    </div>
+                    <div class="exp-company">Kerala, India</div>
+                  </div>
+                  <div class="timeline">2018 — 2021</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="section-title">Certifications & Training</div>
+            <div class="cert-list">
+              <div class="experience-item">
+                <div class="exp-role">
+                  Cybersecurity Training — Ehackify (2023)
+                </div>
+              </div>
+              <div class="experience-item">
+                <div class="exp-role">AI for Educators Workshop (2024)</div>
+              </div>
+              <div class="experience-item">
+                <div class="exp-role">
+                  Entrepreneurial Skill Development — University of Calicut
+                  (2021)
+                </div>
+              </div>
+              <div class="experience-item">
+                <div class="exp-role">
+                  NCC B & C • Karate Technical Official • Conference Paper
+                  Presenter
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section" id="contact">
+            <div class="section-title">Get in touch</div>
+            <div class="card">
+              <p style="margin: 0 0 8px 0">
+                Interested in teaching, training or collaboration? Reach out via
+                email or LinkedIn.
+              </p>
+              <p style="margin: 6px 0">
+                <strong>Email:</strong>
+                <a href="mailto:sempaijks@gmail.com">sempaijks@gmail.com</a>
+              </p>
+              <p style="margin: 6px 0">
+                <strong>LinkedIn:</strong>
+                <a href="https://www.linkedin.com/in/mohammed-banish-b54872198/"
+                  >linkedin.com/in/mohammed-banish-b54872198</a
+                >
+              </p>
+              <div
+                style="
+                  margin-top: 8px;
+                  display: flex;
+                  gap: 8px;
+                  flex-wrap: wrap;
+                "
+              >
+                <a class="pill" href="#">Message</a>
+                <a class="pill" href="#">Schedule</a>
+              </div>
+            </div>
+          </section>
+
+          <footer>
+            Built from resume data • Based on provided resume and details.
+          </footer>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
