@@ -543,20 +543,16 @@
   <p style="margin:0 0 20px 0; color:#444;">Posters · Logos · Brochures — click any image to enlarge.</p>
 
   <div class="gallery-grid">
-    <!-- Poster -->
     <figure class="gallery-item">
-      <img src="assets/images/poster1.jpg" alt="Event poster design" loading="lazy">
-      <figcaption>Event Poster — A3 poster</figcaption>
+      <img src="post01.jpg" alt="Event poster design" loading="lazy">
     </figure>
     
     <figure class="gallery-item">
       <img src="Sports Academy.png" alt="Sports academy logo" loading="lazy">
-      <figcaption>Sports Academy Logo — vector mock</figcaption>
     </figure>
 
     <figure class="gallery-item">
-      <img src="assets/images/Course Brochure.jpg" alt="Tri-fold brochure design" loading="lazy">
-      <figcaption>Tri-fold Brochure — front view</figcaption>
+      <img src="Course Brochure.jpg" alt="Tri-fold brochure design" loading="lazy">
     </figure>
 
   </div>
@@ -568,7 +564,29 @@
   </div>
 </section>
 
-<style>
+ <div class="gallery-grid">
+    <figure class="gallery-item">
+      <img src="post02.jpg" alt="Event poster design" loading="lazy">
+    </figure>
+    
+    <figure class="gallery-item">
+      <img src="logo01.jpg" alt="Sports academy logo" loading="lazy">
+    </figure>
+
+    <figure class="gallery-item">
+      <img src="BROSHURE_01.pdf" alt="Tri-fold brochure design" loading="lazy">
+    </figure>
+
+  </div>
+  
+  <div id="lightbox" aria-hidden="true" role="dialog" tabindex="-1">
+    <button id="lbClose" aria-label="Close preview">&times;</button>
+    <img id="lbImg" alt="">
+    <p id="lbCaption"></p>
+  </div>
+</section>
+
+    <style>
   .gallery-grid{
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -670,6 +688,7 @@
 </script>
   </body>
 </html>
+
 
 
 
