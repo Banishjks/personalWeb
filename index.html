@@ -8,7 +8,52 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet"   />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
+      .drive-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.drive-section h2 {
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+.drive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.drive-card {
+  background: #f4f4f4;
+  padding: 25px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.drive-card i {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #4285F4;
+}
+
+.drive-card span {
+  display: block;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.drive-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
 
       .social-top a,
 .social-bottom a {
@@ -282,7 +327,7 @@
 </div>
             <div class="name">Mohammed Banish</div><br>
             <div class="title">
-              IT Faculty • Graphic Design & Administration Specialist • Experienced PRO and Educator
+              IT Faculty • Graphic Design & Administration Specialist
             </div>
           </div>
         </div>
@@ -301,8 +346,8 @@
             <div class="section-title">Profile</div>
             <div class="profile-bio">
           <p>Dynamic and detail-oriented professional with experience in IT Support, 
-            Graphic Design, Social Media Management, IT Education, Administration, 
-            HR Coordination, and PRO Activities. Proven ability to manage digital 
+            Graphic Design, Social Media Management, IT Education, Administration 
+            and PRO Activities. Proven ability to manage digital 
             platforms, deliver technical support, and coordinate projects efficiently. 
             Skilled in Python, C++, ERP systems, Adobe Creative Suite, Meta ads,
             and multimedia content creation. Experienced in designing brand visuals, social
@@ -513,6 +558,34 @@
                 <span class="badge">Hindi</span>
               </div>
             </div>
+          <section class="drive-section">
+  <h2>My Work Drive</h2>
+
+  <div class="drive-grid">
+
+    <a href="YOUR_PHOTOS_LINK" target="_blank" class="drive-card">
+      <i class="fas fa-camera"></i>
+      <span>Photos</span>
+    </a>
+
+    <a href="YOUR_VIDEOS_LINK" target="_blank" class="drive-card">
+      <i class="fas fa-video"></i>
+      <span>Videos</span>
+    </a>
+
+    <a href="YOUR_LOGOS_LINK" target="_blank" class="drive-card">
+      <i class="fas fa-pen-nib"></i>
+      <span>Logos</span>
+    </a>
+
+    <a href="YOUR_PRESENTATIONS_LINK" target="_blank" class="drive-card">
+      <i class="fas fa-file-powerpoint"></i>
+      <span>Presentations</span>
+    </a>
+
+  </div>
+</section>
+
 
           <section class="section">
            <div class="section" style="margin-top: 16px">
@@ -533,7 +606,7 @@
             <div class="section-title">Get in touch</div>
             <div class="card">
               <p style="margin: 0 0 8px 0">
-                Interested in teaching, training or collaboration? Reach out via
+                Interested in Work culture, teaching & training or collaboration? Reach out via
                 email or LinkedIn.
               </p>
               <p style="margin: 6px 0">
@@ -858,6 +931,7 @@
 </script>
   </body>
 </html>
+
 
 
 
